@@ -15,17 +15,17 @@
     </a>
     <button class="page-header__toggle" type="button" alt="Кнопка открытия главного меню"></button>
     <nav class="main-nav">
-        <ul class="main-nav__list site-list">
-          <li class="site-list__item site-list__item--active">
-            <a>Главная</a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="site-list__item">
-            <a href="form.html">Подбор программы</a>
-          </li>
-        </ul>
+      <ul class="main-nav__list site-list">
+        <li class="site-list__item site-list__item--active">
+          <a>Главная</a>
+        </li>
+        <li class="site-list__item">
+          <a href="catalog.html">Каталог продукции</a>
+        </li>
+        <li class="site-list__item">
+          <a href="form.html">Подбор программы</a>
+        </li>
+      </ul>
     </nav>
   </header>
 
@@ -35,9 +35,9 @@
     <h1 class="visually-hidden">Главная страница-Кэт энерджи</h1>
 
     <section class="intro-block">
-      <h2 class="intro-block_title">Функциональное питание для котов</h2>
-      <p class="intro-block_text">Занялся собой? Займись котом!</p>
-      <a href="form.html" class="button intro-block_button">Подобрать программу</a>
+      <h2 class="intro-block__title">Функциональное питание для котов</h2>
+      <p class="intro-block__text">Занялся собой? Займись котом!</p>
+      <a href="form.html" class="button intro-block__button">Подобрать программу</a>
     </section>
 
     <section class="programs">
@@ -67,17 +67,60 @@
     <section class="features">
       <h2 class="features__title">Как это работает</h2>
       <ul class="features__list">
-        <li class="features__item features__item--nutrients">Функциональное питание содержит только полезные питательные вещества.
+        <li class="features__item features__item--nutrients">Функциональное питание содержит только полезные питательные
+          вещества.
         </li>
-        <li class="features__item features__item--ease">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.
+        <li class="features__item features__item--ease">Выпускается в виде порошка, который нужно лишь залить кипятком и
+          готово.
         </li>
-        <li class="features__item features__item--diet">Замените один-два приема обычной еды на наше функциональное питание.</li>
-        <li class="features__item features__item--fast">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
+        <li class="features__item features__item--diet">Замените один-два приема обычной еды на наше функциональное
+          питание.</li>
+        <li class="features__item features__item--fast">Уже через месяц наслаждайтесь изменениями к лучшему вашего
+          питомца!</li>
       </ul>
     </section>
 
-    <!--блок «Живой пример»-->
-    <!--блок карты-->
+    <section class="example">
+      <h2 class="example__title">Живой пример</h2>
+      <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+        Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов
+        в день.
+      </p>
+      <ul class="example__stats">
+        <li class="example__item">
+          <b class="example__value">5 кг</b>
+          <p class="example__legend">снижение веса</p>
+        </li>
+        <li>
+          <b class="example__value">60 дней</b>
+          <p class="example__legend">затрачено времени</p>
+        </li>
+      </ul>
+      <p class="example__total">Затраты на питание: 15 000 руб.</p>
+      <img class="example__photo example__photo--before" src="https://via.placeholder.com/310x233" width="310"
+        height="233" alt="Фото кота до Кэт Энерджи">
+      <img class="example__photo example__photo--after" src="https://via.placeholder.com/310x233" width="310"
+        height="233" alt="Фото кота после питания по программе Кэт Энерджи">
+      <div class="example__range">
+        <button class="example__toggle example__toggle--before" type="button">Было</button>
+        <div class="example__toggle-scale">
+          <div class="example__toggle-bar"></div>
+        </div>
+        <button class="example__toggle example__toggle--after" type="button">Стало</button>
+      </div>
+    </section>
+
+    <section class="cooperation">
+      <h2 class="cooperation__legend">приглашаем к сотрудничеству дилеров!</h2>
+      <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="cooperation__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sse!4v1584711662597!5m2!1sen!2sse"
+          width="320" height="362" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        <img class="cooperation__image" src="https://via.placeholder.com/320x362" width="320" height="362"
+          alt="Кэт Энерджи по адресу Санкт-Петербург, Большая Конюшенная, дом 19/8">
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
