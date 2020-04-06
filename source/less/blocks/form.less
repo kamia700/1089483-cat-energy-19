@@ -1,0 +1,94 @@
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.form__legend {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @gray--darkest;
+  margin: 30px 0;
+}
+
+.form__label {
+  display: flex;
+  align-items: baseline;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @gray--dark;
+  text-transform: uppercase;
+}
+
+.form__input {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+
+  margin-bottom: 14px;
+
+  padding: 11px;
+  border: 1px solid @gray-50;
+  flex-grow: 1;
+}
+
+.form__input::placeholder {
+  color: @gray;
+  opacity: 1;
+}
+
+.form__textarea::placeholder {
+  font-family: @font-title;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @gray;
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.form__textarea {
+  padding: 13px;
+
+  border: 1px solid @gray-50;
+}
+
+.form__input--weight,
+.form__input--age {
+  appearance: textfield;
+}
+
+.form__info--border {
+  border: 1px solid @border-color-over;
+
+  padding: 20px;
+}
+
+.form__label--radio,
+.form__label--checkbox {
+  display: block;
+
+  min-width: 280px;
+}
+
+.selection__obligatory {
+  width: 100%;
+}
+
+.form__button {
+  width: 100%;
+  border: none;
+}
