@@ -3,16 +3,45 @@
   line-height: 60px;
   font-weight: 400;
   color: @gray--darkest;
+
+  padding: 15px 0;
 }
 
 .catalog__list {
-  padding: 0;
-  margin: 0;
+  .list-reset ();
+  outline: @outline-red;
 }
 
 .catalog__item {
-  list-style: none;
-
   border: 1px solid @border-color-over;
   margin-bottom: -1px;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .catalog__item {
+    border: none;
+    margin: 70px 30px;
+  }
+
+  .catalog__list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog__item {
+    border: none;
+    margin: 70px 40px;
+  }
+
+  .catalog__list {
+    padding: 0 70px;
+  }
 }

@@ -1,10 +1,16 @@
 .page-header {
+  outline: @outline-red;
+
   font-family: @font-title;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .page-header__block {
+  outline: @outline-green;
+
   display: flex;
-  align-items: center;
 
   border-bottom: 1px solid @border-color;
 }
@@ -14,4 +20,31 @@
 
   width: 20px;
   height: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .page-header__logo-image {
+    height: 64px;
+    width: 177px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .page-header__block {
+    width: 245px;
+  }
+
+  .page-header__logo-image {
+    height: 70px;
+  }
 }
