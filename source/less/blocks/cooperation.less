@@ -40,8 +40,8 @@
 }
 
 .cooperation__map iframe {
-  position: absolute;
   z-index: 1;
+  width: 100%;
 
   border: none;
 }
@@ -51,6 +51,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
 
   z-index: 0;
   height: 363px;
@@ -73,31 +74,29 @@
     width: 155px;
     text-align: right;
   }
-
-  .cooperation__map iframe {
-    width: 100%;
-  }
-
-  .cooperation__image {
-    width: 100%;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .cooperation {
+    outline: @outline-red;
     position: relative;
   }
 
-  .cooperation__legend {
+  .cooperation__container {
+    outline: @outline-red;
     position: absolute;
+    height: 50%;
 
     z-index: 2;
-    bottom: 55px;
-    left: 110px;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
+  .cooperation__legend {
     width: 570px;
-    min-height: 202px;
-
-    background-color: #ffffff;
+    height: 100%;
+    background-color: @white;
   }
 }
