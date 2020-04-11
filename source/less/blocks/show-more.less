@@ -10,6 +10,7 @@
   font-weight: 300;
   color: @gray--darkest;
   text-transform: uppercase;
+  text-align: center;
 
   margin-top: 80px;
 }
@@ -20,8 +21,8 @@
   line-height: 16px;
   font-weight: 300;
   color: @gray;
+  text-align: center;
 }
-
 
 .show-more__button {
   align-self: stretch;
@@ -29,4 +30,33 @@
   margin-top: auto;
   padding-top: 10px;
   margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .show-more {
+    outline: @outline-green;
+
+    width: 324px;
+    padding: 40px;
+    height: 100%;
+  }
+
+  .show-more__title {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 300;
+
+    margin-top: 165px;
+  }
+
+  .show-more__text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .show-more {
+    width: 245px;
+  }
 }

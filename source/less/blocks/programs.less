@@ -1,6 +1,27 @@
 .programs__list {
-  list-style: none;
+  outline: @outline-red;
 
-  padding: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+
+  .list-reset ();
+  margin: 0 auto;
+}
+
+.programs__item {
+  margin-bottom: 20px;
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs__list {
+    margin-top: 80px;
+  }
 }

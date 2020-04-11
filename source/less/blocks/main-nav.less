@@ -1,9 +1,16 @@
+.main-nav {
+  outline: @outline-green;
+
+  width: 100%;
+}
+
 .main-nav__list {
   list-style: none;
   text-align: center;
 
+  .list-reset ();
+
   margin: 0;
-  padding: 0;
 }
 
 .main-nav__item {
@@ -20,4 +27,26 @@
   color: @gray--darkest;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: 440px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    width: 480px;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-between;
+  }
 }

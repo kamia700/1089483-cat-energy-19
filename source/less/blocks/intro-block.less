@@ -1,8 +1,10 @@
 .intro-block {
-  background-image: url("../img/index-can-mobile@1x.png"), url("../img/index-background-mobile@1x.jpg");
-  background-position: 50% 80%, top;
-  background-repeat: no-repeat, no-repeat;
-  background-size: 222px auto, auto 307px;
+  outline: @outline-red;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .intro-block__title {
@@ -32,11 +34,76 @@
 
   margin-top: auto;
   padding-top: 10px;
+  margin-bottom: 20px;
 }
 
 .intro-block__container {
+  outline: @outline-green;
+
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-  min-height: 482px;
+@media (min-width: @tablet-width) {
+  .intro-block {
+    background-image: none;
+  }
+
+  .intro-block__container {
+    padding-left: 85px;
+  }
+
+  .intro-block__title {
+    color: @gray--darkest;
+    font-size: 60px;
+    line-height: 60px;
+    text-align: left;
+  }
+
+  .intro-block__text {
+    color: @gray--darkest;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+  }
+
+  .intro-block__image {
+    order: 3;
+    width: 565px;
+    height: 580px;
+
+    margin-top: -90px;
+  }
+
+  .intro-block__button {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 245px;
+    margin-top: 30px;
+    z-index: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .intro-block__container {
+    // помогает создать сетку как по макету, но не проходит на переполнение
+    height: 580px;
+
+    padding-top: 30px;
+  }
+
+  .intro-block__title {
+    width: 415px;
+    padding-top: 50px;
+  }
+
+  .intro-block__image {
+    margin-top: 0;
+    margin-left: -230px;
+    width: 520px;
+    height: 500px;
+  }
 }
