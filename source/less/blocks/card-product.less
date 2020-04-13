@@ -31,3 +31,51 @@
   padding-top: 10px;
   margin-bottom: 15px;
 }
+
+@media (min-width: @tablet-width) {
+  .card-product {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .card-product__title {
+    margin-bottom: 25px;
+
+    margin-right: auto;
+  }
+
+  .card-product__text {
+    width: auto;
+  }
+
+  .card-product__button {
+    width: 100%;
+  }
+
+  .card-product__info {
+    padding-left: 50px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .card-product {
+    justify-content: space-between;
+  }
+
+  .card-product__button {
+    width: 248px;
+    flex-grow: 0;
+
+    margin: 13px 0;
+  }
+
+  .card-product__text {
+    width: 32%;
+  }
+
+  .card-product__title {
+    margin: 0;
+    width: 33%;
+  }
+}

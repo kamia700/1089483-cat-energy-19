@@ -10,10 +10,10 @@
 
 <body>
 
-  <header class="page-header container">
-    <div class="page-header__block">
+  <header class="page-header">
+    <div class="page-header__block container">
       <a href="" class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
+        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
       </a>
       <button class="page-header__toggle" type="button" alt="Кнопка открытия главного меню"></button>
     </div>
@@ -218,7 +218,7 @@
       </ul>
     </section>
 
-    <!-- <section class="extra-products container">
+    <section class="extra-products container">
       <h2 class="extra-products__title">Дополнительные товары</h2>
       <ul class="extra-products__list">
         <li class="extra-products__item">
@@ -270,21 +270,37 @@
           </article>
         </li>
       </ul>
-    </section> -->
 
-    <section class="gift container">
-      <h2 class="visually-hidden">Получите чехол в подарок!</h2>
-      <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+      <article class="gift container">
+        <h2 class="visually-hidden">Получите чехол в подарок!</h2>
+        <svg class="gift__image" fill="#ffffff" width="59" height="63" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.5 60" style="enable-background:new 0 0 55.5 60;" xml:space="preserve">
+          <path
+            d="M52.3,12.2h-7c0.5-0.7,0.8-1.4,1.1-2.2c0.6-2,0.4-4.1-0.6-5.9c-1-1.8-2.6-3.1-4.6-3.7c-2-0.6-4.1-0.4-5.9,0.6
+          c-3.6,2-6.2,6.1-7.6,9c-1.4-2.9-4-7.1-7.6-9c-3.8-2-8.5-0.6-10.5,3.1c-1.4,2.7-1.2,5.8,0.5,8.1h-7c-1.7,0-3.1,1.4-3.1,3.1v9.4
+          c0,1.7,1.4,3.1,3.1,3.1H4v26.1c0,3.3,2.7,6,6,6h35.5c3.3,0,6-2.7,6-6V27.8h0.8c1.7,0,3.1-1.4,3.1-3.1v-9.4
+          C55.5,13.6,54.1,12.2,52.3,12.2z M36.5,3c1.3-0.7,2.7-0.8,4.1-0.4C41.9,3,43,3.9,43.7,5.2c0.7,1.3,0.8,2.7,0.4,4.1
+          c-0.4,1.2-1.1,2.2-2.2,2.9H29.4C30.5,9.6,33,5,36.5,3z M11.7,5.2C13.2,2.6,16.4,1.6,19,3c3.5,1.9,6,6.6,7.1,9.1H13.5
+          C11.2,10.7,10.4,7.6,11.7,5.2z M26.5,27.8v13.7H6.4V27.8H26.5z M6.4,53.9v-10h20.2v13.7H10C8,57.6,6.4,55.9,6.4,53.9z M45.5,57.6
+          H28.9V43.9h20.2v10C49.1,55.9,47.5,57.6,45.5,57.6z M49.1,41.5H28.9V27.8h20.2V41.5z M53.1,24.7c0,0.4-0.3,0.7-0.7,0.7h-2
+          c0,0,0,0,0,0s0,0,0,0H27.7c0,0,0,0,0,0s0,0,0,0H5.2c0,0,0,0,0,0s0,0,0,0h-2c-0.4,0-0.7-0.3-0.7-0.7v-9.4c0-0.4,0.3-0.7,0.7-0.7h49.2
+          c0.4,0,0.7,0.3,0.7,0.7V24.7z">
+          </path>
+        </svg>
+        <p class="gift__text">Закажите все и получите чехол для кота в подарок!</p>
+      </article>
     </section>
 
   </main>
 
   <footer class="page-footer">
     <section class="page-footer__cooperation cooperation">
-      <article class="cooperation__legend container">
-        <h2 class="cooperation__title">приглашаем к&nbsp;сотрудничеству дилеров!</h2>
-        <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-      </article>
+      <div class="cooperation__container container">
+        <article class="cooperation__legend">
+          <h2 class="cooperation__title">приглашаем к&nbsp;сотрудничеству дилеров!</h2>
+          <p class="cooperation__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </article>
+      </div>
+
       <div class="cooperation__map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sse!4v1584711662597!5m2!1sen!2sse"
@@ -341,7 +357,6 @@
       </div>
     </section>
   </footer>
-
 
 </body>
 
