@@ -32,7 +32,9 @@
 }
 
 .example__item {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   text-align: center;
   color: @gray--darkest;
@@ -40,7 +42,6 @@
   border: 1px solid @gray-1;
   border-radius: 3px;
 
-  padding: 15px 0;
   width: 45%;
 }
 
@@ -61,12 +62,14 @@
   font-size: 12px;
   line-height: 12px;
 
-  // временно, пока не найду лучшее решение
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0 auto;
+  // position: absolute;
+  // bottom: -8px;
+  // left: 50%;
+  // transform: translateX(-50%);
+
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: -5px;
 
   background-color: @gray--lightest;
 }
@@ -96,18 +99,16 @@
   .example {
     position: relative;
     background-color: @white;
+    background-image: linear-gradient(90deg, @gray--lightest 50%, #eaeaea 50%);
+    background-position: 0 100%;
+    background-size: 100% 45%;
+    background-repeat: no-repeat;
   }
 
-  .example::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    min-height: 461px;
-    width: 100%;
-    background-image: linear-gradient(to right, @gray--lightest 50%, #eaeaea 50%);
-  }
+  // background-image: linear-gradient(
+  //       180deg, #FC3D32 57%, transparent 57%),
+  //       linear-gradient(
+  //       90deg, @gray--lightest 50%, #eaeaea 50%);
 
   .example__block {
     position: relative;
@@ -155,10 +156,6 @@
     width: 52.5%;
   }
 
-  .example__item {
-    width: 45%;
-  }
-
   .example__column {
     display: flex;
     flex-direction: column;
@@ -166,7 +163,7 @@
 
   .example__range {
     margin-top: auto;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 
     align-self: center;
   }
@@ -182,10 +179,8 @@
     min-height: 620px;
 
     display: flex;
-  }
 
-  .example::before {
-    background-image: linear-gradient(to right, @gray--lightest 73%, #eaeaea 50%);
+    background-size: 100% 71%;
   }
 
   .example__block {
