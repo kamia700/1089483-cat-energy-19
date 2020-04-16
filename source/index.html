@@ -10,14 +10,14 @@
 
 <body>
 
-  <header class="page-header page-header--index">
-    <div class="page-header__block container">
+  <header class="page-header page-header--index container">
+    <div class="page-header__block">
       <a href="" class="page-header__logo">
-        <img class="page-header__logo-image" src="../img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
+        <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
       </a>
       <button class="page-header__toggle" type="button" alt="Кнопка открытия главного меню"></button>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--index">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active">
           <a>Главная</a>
@@ -39,7 +39,8 @@
 
     <section class="intro-block">
       <div class="intro-block__container container">
-        <h2 class="intro-block__title">Функциональное питание&nbsp;для котов</h2>
+        <h2 class="intro-block__title">Функциональное
+питание для котов</h2>
         <p class="intro-block__text">Занялся собой? Займись котом!</p>
         <img class="intro-block__image" src="../img/index-can-mobile@1x.png" width="240" height="260"
           alt="Банка с кормом Кэт энерджи">
@@ -89,33 +90,42 @@
 
     <section class="example">
       <div class="example__block container">
-        <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-          Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
-          часов
-          в день.
-        </p>
-        <ul class="example__stats">
-          <li class="example__item">
-            <b class="example__value">5 кг</b>
-            <p class="example__legend">снижение веса</p>
-          </li>
-          <li class="example__item">
-            <b class="example__value">60 дней</b>
-            <p class="example__legend">затрачено времени</p>
-          </li>
-        </ul>
-        <p class="example__total">Затраты на питание: 15 000 руб.</p>
-        <img class="example__photo example__photo--before" src="img/before-mobile@1x.png" width="310" height="230"
-          alt="Фото кота до Кэт Энерджи">
-        <!-- <img class="example__photo example__photo--after" src="https://via.placeholder.com/310x233" width="310"
-          height="230" alt="Фото кота после питания по программе Кэт Энерджи"> -->
-        <div class="example__range">
-          <button class="example__toggle example__toggle--before" type="button">Было</button>
-          <div class="example__toggle-scale">
-            <div class="example__toggle-bar"></div>
+        <div class="example__column">
+          <h2 class="example__title">Живой пример</h2>
+          <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
+            часов
+            в день.
+          </p>
+          <div class="example__info">
+            <ul class="example__stats">
+              <li class="example__item">
+                <b class="example__value">5 кг</b>
+                <p class="example__legend">снижение веса</p>
+              </li>
+              <li class="example__item">
+                <b class="example__value">60 дней</b>
+                <p class="example__legend">затрачено времени</p>
+              </li>
+            </ul>
+            <p class="example__total">
+              <span class="example__text-price">Затраты на питание:</span>
+              <span class="example__price">15&nbsp;000&nbsp;руб.</span>
+            </p>
           </div>
-          <button class="example__toggle example__toggle--after" type="button">Стало</button>
+        </div>
+        <div class="example__column">
+          <img class="example__photo example__photo--before" src="img/before-mobile@1x.png" width="310" height="230"
+            alt="Фото кота до Кэт Энерджи">
+          <!-- <img class="example__photo example__photo--after" src="https://via.placeholder.com/310x233" width="310"
+          height="230" alt="Фото кота после питания по программе Кэт Энерджи"> -->
+          <div class="example__range">
+            <button class="example__toggle example__toggle--before" type="button">Было</button>
+            <div class="example__toggle-scale">
+              <div class="example__toggle-bar"></div>
+            </div>
+            <button class="example__toggle example__toggle--after" type="button">Стало</button>
+          </div>
         </div>
       </div>
     </section>

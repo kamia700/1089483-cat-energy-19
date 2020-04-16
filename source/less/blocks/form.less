@@ -9,7 +9,6 @@
   background-color: transparent;
   border: none;
 
-  margin: 0;
   padding: 0;
 }
 
@@ -75,6 +74,7 @@
   border: 1px solid @border-color-over;
 
   padding: 20px;
+  // margin: 0;
 }
 
 .form__label--radio,
@@ -84,11 +84,125 @@
   min-width: 280px;
 }
 
-.selection__obligatory {
+.form__button {
+  border: none;
+
   width: 100%;
 }
 
-.form__button {
-  width: 100%;
-  border: none;
+@media (max-width: @mobile-width-only) {
+  .form__info--border {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .form__legend {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .form__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .form__button {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 45%;
+  }
+
+  .form {
+    padding: 0 40px;
+  }
+
+  .form__info--border {
+    padding: 25px;
+  }
+
+  .form__textarea {
+    width: 100%;
+  }
+
+  .form__info--add {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .form__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+  }
+
+  .form__label--checkbox {
+    width: 45%;
+  }
+
+  .form__obligatory {
+    width: 45%;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 0;
+  }
+
+  .form__info {
+    padding: 0;
+  }
+
+  .form__info--about {
+    width: 45%;
+    margin: 0;
+  }
+
+  .form__info--border {
+    width: 45%;
+    margin: 0;
+  }
+
+  .form__container-about-cat {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    width: 94%;
+    margin: 0 auto;
+    max-width: 1220px;
+  }
+
+  .form__info--contacts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .form__label--contacts {
+    width: 45%;
+  }
+
+  .form__label--checkbox {
+    width: 20%;
+  }
+
+  .form__button-container {
+    padding: 0;
+  }
+
+  .form__input--age {
+    margin-bottom: 0;
+  }
 }

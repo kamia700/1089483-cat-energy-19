@@ -17,4 +17,27 @@
   margin: 0;
   padding: 10px 0;
   text-transform: uppercase;
+  white-space: pre-wrap;
+}
+
+@media (min-width: @tablet-width) {
+  .selection__title {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 400;
+  }
+
+  .selection__text {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .selection__text {
+    padding-left: 0;
+  }
 }
