@@ -1,15 +1,20 @@
 .programs__list {
-  outline: @outline-red;
-
   display: flex;
   flex-direction: column;
 
   .list-reset ();
   margin: 0 auto;
+  padding-top: 7px;
 }
 
 .programs__item {
   margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .programs__item {
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -17,11 +22,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .programs__list {
-    margin-top: 80px;
+    margin-top: 45px;
   }
 }
