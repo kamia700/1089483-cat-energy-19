@@ -3,7 +3,8 @@
   flex-wrap: wrap;
 
   padding: 0 20px;
-  min-height: 206px;
+  width: 100%;
+  // min-height: 206px;
 }
 
 .card-item__image {
@@ -90,9 +91,12 @@
     border-collapse: collapse;
   }
 
+  .card-item__details tr {
+    border-bottom: 1px solid @gray-1;
+  }
+
   .card-item__details td {
-    height: 31px;
-    border-bottom: 1px solid @gray;
+    padding: 8px 0;
   }
 
   .catalog-item__pic {
@@ -105,7 +109,7 @@
 
   .card-item__button {
     margin-bottom: 0;
-    margin-top: 25px;
+    margin-top: 20px;
     margin-left: 36px;
     margin-right: 36px;
 
@@ -123,7 +127,5 @@
   .card-item {
     justify-content: flex-end;
     width: 245px;
-
-    background-color: @gray--lightest;
   }
 }

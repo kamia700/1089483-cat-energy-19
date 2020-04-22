@@ -9,15 +9,21 @@
 }
 
 .features__list {
-
   .list-reset ();
-  padding-left: 80px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .features__item {
   position: relative;
-  padding-bottom: 28px;
+  // padding-bottom: 28px;
+  margin-bottom: 27px;
   font-family: @font-text;
+
+  padding-left: 80px;
+  min-height: 50px;
 }
 
 .features__item--nutrients {
@@ -25,7 +31,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -40%;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -42,7 +48,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -40%;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -59,7 +65,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -40%;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -76,7 +82,7 @@
     content: "";
     position: absolute;
     top: 0;
-    left: -40%;
+    left: 0;
 
     width: 60px;
     height: 60px;
@@ -100,13 +106,13 @@
     color: @gray--darkest;
 
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 28px;
   }
 
   .features__list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-between;
 
     .list-reset ();
 
@@ -120,6 +126,7 @@
     width: 46%;
     margin: 45px 0;
     padding-bottom: 45px;
+    padding-left: 0;
   }
 
   .features__item--nutrients {

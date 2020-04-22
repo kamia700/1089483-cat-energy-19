@@ -2,7 +2,8 @@
   background-image: url("../img/index-background-mobile@1x.jpg");
   background-position: top;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: 100% 61.5%;
+
 }
 
 .intro-block__title {
@@ -13,7 +14,7 @@
   text-align: center;
 
   margin: 0;
-  margin-top: 30px;
+  margin-top: 27px;
   margin-bottom: 10px;
   white-space: pre-wrap;
 }
@@ -26,6 +27,7 @@
   text-transform: uppercase;
 
   margin-bottom: 30px;
+  margin-top: 15px;
 }
 
 .intro-block__button {
@@ -34,7 +36,7 @@
 
   margin-top: auto;
   padding-top: 11px;
-  margin-bottom: 15px;
+  margin-bottom: 16px;
   order: 4;
 }
 
@@ -43,7 +45,11 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-start;
-  min-height: 496px;
+  min-height: 495px;
+}
+
+.intro-block__image {
+  align-self: center;
 }
 
 @media (min-width: @tablet-width) {
@@ -62,6 +68,7 @@
     text-align: left;
 
     margin-bottom: 20px;
+    margin-top: 30px;
   }
 
   .intro-block__text {
@@ -69,6 +76,8 @@
     font-size: 20px;
     line-height: 20px;
     text-align: left;
+
+    margin-top: 20px;
   }
 
   .intro-block__image {
@@ -104,14 +113,15 @@
 
   .intro-block__title {
     width: 415px;
-    padding-top: 50px;
+    margin-top: 80px;
   }
 
   .intro-block__image {
     margin-top: 0;
-    margin-left: -230px;
+    // margin-left: -230px;
     width: 520px;
     height: 500px;
+    margin-left: -52%;
   }
 
   .intro-block__button {

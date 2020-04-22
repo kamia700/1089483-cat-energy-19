@@ -1,8 +1,12 @@
 .programs-card {
+  position: relative;
   background-color: @gray--lightest;
   padding: 20px;
 
   min-height: 265px;
+
+  display: flex;
+    flex-direction: column;
 }
 
 .programs-card__title,
@@ -12,23 +16,24 @@
 }
 
 .programs-card__title {
-  position: relative;
   font-size: 24px;
   line-height: 37.02px;
   font-weight: 300;
 
   margin: 0;
-  margin-left: 70px;
+  padding-left: 70px;
   margin-top: 10px;
-  margin-bottom: 32px;
+  margin-bottom: 15px;
 }
 
-.programs-card__title--slimming {
+.programs-card--slimming {
   &::after {
     content: "";
     position: absolute;
-    top: -5px;
-    left: -60px;
+    // top: 8%;
+    // left: 10%;
+    top: 22px;
+    left: 28px;
 
     width: 35px;
     height: 49px;
@@ -39,8 +44,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: -3px;
-    left: -70px;
+    // top: 9%;
+    // left: 8%;
+
+    top: 23px;
+    left: 20px;
 
     width: 50px;
     height: 50px;
@@ -50,12 +58,14 @@
   }
 }
 
-.programs-card__title--mass {
+.programs-card--mass {
   &::after {
     content: "";
     position: absolute;
-    top: 5px;
-    left: -80px;
+    // top: 13%;
+    // left: 5%;
+    top: 35px;
+    left: 13px;
 
     width: 67px;
     height: 28px;
@@ -66,8 +76,11 @@
   &::before {
     content: "";
     position: absolute;
-    top: -3px;
-    left: -70px;
+    // top: 9%;
+    // left: 8%;
+
+    top: 23px;
+    left: 20px;
 
     width: 50px;
     height: 50px;
@@ -83,10 +96,15 @@
   font-size: 16px;
   line-height: 16px;
 
+  display: block;
+  padding-top: 19px;
+
+  border-top: 1px solid @border-color;
+
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
+    top: 23px;
     left: 95px;
 
     width: 24px;
@@ -100,10 +118,8 @@
   font-family: @font-text;
 
   padding: 0;
-  padding-bottom: 22px;
-  margin-bottom: 19px;
-
-  border-bottom: 1px solid @border-color;
+  margin-bottom: 23px;
+  // border-bottom: 1px solid @border-color;
 }
 
 @media (min-width: @tablet-width) {
@@ -119,15 +135,18 @@
   .programs-card__title {
     font-size: 36px;
 
-    margin-left: 0;
+    padding-left: 0;
     margin-top: 60px;
     margin-bottom: 23px;
   }
 
-  .programs-card__title--slimming {
+  .programs-card--slimming {
     &::after {
-      top: 10%;
-      left: 66.5%;
+      top: 22%;
+      left: 67%;
+
+      // top: 81px;
+      // left: 475px;
 
       width: 140px;
       height: 195px;
@@ -135,26 +154,29 @@
 
     &::before {
       content: "";
-      top: 43%;
-      left: 62%;
+      top: 25%;
+      left: 63%;
+
+      // top: 92px;
+      // left: 445px;
 
       width: 200px;
       height: 200px;
     }
   }
 
-  .programs-card__title--mass {
+  .programs-card--mass {
     &::after {
-      top: 150%;
-      left: 56.5%;
+      top: 37%;
+      left: 58%;
 
       width: 269px;
       height: 114px;
     }
 
     &::before {
-      top: 43%;
-      left: 62%;
+      top: 25%;
+      left: 63%;
 
       width: 200px;
       height: 200px;
@@ -168,22 +190,21 @@
 
     width: 59%;
     margin-top: 0;
-
-    border: none;
   }
 
-  .programs-card__text--mass {
-    width: 54%;
-  }
+  // .programs-card__text--mass {
+  //   width: 54%;
+  // }
 
   .programs-card__link {
     font-size: 20px;
     line-height: 20px;
 
     margin-top: 15px;
+    border: none;
 
     &::after {
-      top: 5px;
+      top: 22px;
       left: 129px;
 
       width: 25px;
@@ -203,7 +224,6 @@
     margin-bottom: 72px;
   }
 
-  .programs-card__text--mass,
   .programs-card__text {
     width: 100%;
     margin-bottom: 0;
@@ -213,40 +233,46 @@
     margin-top: 9px;
   }
 
-  .programs-card__title--slimming {
+  .programs-card--slimming {
     &::after {
-      top: -100%;
-      left: 3%;
+      top: 11%;
+      left: 11.5%;
 
-      width: 75px;
-      height: 95px;
+      width: 77px;
+      height: 97px;
     }
 
     &::before {
-      top: -85%;
-      left: 0;
+      top: 13%;
+      left: 9%;
 
       width: 100px;
       height: 100px;
     }
   }
 
-  .programs-card__title--mass {
+  .programs-card--mass {
     &::after {
-      top: -25%;
-      left: -4%;
+      top: 19%;
+      left: 6%;
 
 
-      width: 137px;
+      width: 134px;
       height: 60px;
     }
 
     &::before {
-      top: -85%;
-      left: 0;
+      top: 13%;
+      left: 9%;
 
       width: 100px;
       height: 100px;
+    }
+  }
+
+  .programs-card__link {
+    &::after {
+      top: 25px;
     }
   }
 }
