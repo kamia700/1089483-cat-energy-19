@@ -1,14 +1,11 @@
-.extra-products {
-  outline: @outline-green;
-}
-
 .extra-products__title {
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
   color: @gray--darkest;
+
   margin: 0;
-  padding: 30px 0;
+  padding: 32px 0;
 
   border-bottom: 1px solid @gray-1;
 }
@@ -16,6 +13,7 @@
 .extra-products__list {
   padding: 0;
   margin-bottom: 0;
+  margin-top: 0;
 
   list-style: none;
 }
@@ -29,11 +27,15 @@
     font-size: 36px;
     line-height: 36px;
 
+    padding: 0;
+    margin-left: 35px;
+    margin-bottom: 80px;
+    margin-top: 5px;
     border-bottom: none;
   }
 
   .extra-products__item {
-    padding: 0 40px;
+    padding: 0 35px;
 
     border: 1px solid @gray-50;
   }
@@ -47,6 +49,14 @@
 
   .extra-products__title {
     width: 100%;
+
+    margin-left: 0;
+    margin-top: 12px;
+    margin-bottom: 80px;
+  }
+
+  .extra-products__card {
+    min-height: 70px;
   }
 
   .extra-products__item {
@@ -54,12 +64,14 @@
 
     border: none;
     border-bottom: 1px solid @gray-1;
+    margin-bottom: -1px;
   }
 
   .extra-products__list {
-    width: 69%;
-
+    width: 73.4%;
     margin: 0;
+
+    margin-bottom: 95px;
   }
 
   .extra-products__item:first-child {

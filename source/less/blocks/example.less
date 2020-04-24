@@ -1,11 +1,7 @@
 .example {
-  outline: @outline-red;
-
   background-color: @gray--lightest;
-}
 
-.example__block {
-  outline: @outline-green;
+  min-height: 707px;
 }
 
 .example__title {
@@ -13,6 +9,10 @@
   line-height: 60px;
   font-weight: 400;
   color: @gray--darkest;
+
+  margin-bottom: 25px;
+  margin-top: 20px;
+  padding-top: 18px;
 }
 
 .example__text {
@@ -20,6 +20,8 @@
   font-size: 14px;
   line-height: 18px;
   color: @gray;
+
+  margin-bottom: 25px;
 }
 
 .example__stats {
@@ -27,6 +29,7 @@
 
   margin: 0;
   padding: 0;
+  margin-bottom: 32px;
 
   list-style: none;
 }
@@ -42,7 +45,7 @@
   border: 1px solid @gray-1;
   border-radius: 3px;
 
-  width: 45%;
+  width: 44%;
 }
 
 .example__item:last-child {
@@ -55,6 +58,9 @@
   font-weight: 400;
   color: @gray--darkest;
   text-transform: uppercase;
+
+  margin-top: 15px;
+  margin-bottom: 7px;
 }
 
 .example__legend {
@@ -62,14 +68,11 @@
   font-size: 12px;
   line-height: 12px;
 
-  // position: absolute;
-  // bottom: -8px;
-  // left: 50%;
-  // transform: translateX(-50%);
-
   margin: 0;
   margin-top: auto;
-  margin-bottom: -5px;
+  margin-bottom: -15px;
+  max-width: 57%;
+  padding: 0 5px;
 
   background-color: @gray--lightest;
 }
@@ -80,6 +83,8 @@
   color: @gray--darkest;
   text-transform: uppercase;
   text-align: center;
+
+  margin-bottom: 35px;
 }
 
 .example__toggle {
@@ -95,20 +100,62 @@
   padding: 0;
 }
 
+.example__range {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 30px;
+  padding-bottom: 35px;
+}
+
+.example__toggle--before {
+  margin-left: auto;
+}
+
+.example__toggle--after {
+  margin-right: auto;
+}
+
+.example__toggle-scale {
+  position: relative;
+
+  width: 84px;
+  height: 14px;
+
+  background-color: @white;
+  border: 1px solid @gray-1;
+  border-radius: 6px;
+
+  margin: 0 18px;
+}
+
+.example__toggle-bar {
+  position: absolute;
+  width: 35px;
+  height: 6px;
+
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+  background-color: @green;
+}
+
 @media (min-width: @tablet-width) {
   .example {
     position: relative;
     background-color: @white;
     background-image: linear-gradient(90deg, @gray--lightest 50%, #eaeaea 50%);
     background-position: 0 100%;
-    background-size: 100% 45%;
+    background-size: 100% 43%;
     background-repeat: no-repeat;
-  }
 
-  // background-image: linear-gradient(
-  //       180deg, #FC3D32 57%, transparent 57%),
-  //       linear-gradient(
-  //       90deg, @gray--lightest 50%, #eaeaea 50%);
+    border-top: 1px solid @gray-1;
+  }
 
   .example__block {
     position: relative;
@@ -117,31 +164,45 @@
   .example__info {
     display: flex;
     justify-content: space-between;
+
+    margin-bottom: 55px;
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
+
+    margin-top: 27px;
+    margin-bottom: 47px;
   }
 
   .example__text {
     font-size: 16px;
     line-height: 24px;
 
-    margin-bottom: 40px;
+    margin-bottom: 53px;
+    width: 96%;
   }
 
   .example__value {
     font-size: 30px;
     line-height: 37.02px;
+
+    margin-bottom: 12px;
+  }
+
+  .example__stats {
+    width: 51.5%;
   }
 
   .example__legend {
     font-size: 14px;
     line-height: 14px;
 
-    min-width: 145px;
+    width: auto;
+    max-width: none;
     background-color: @white;
+    margin-bottom: -8px;
   }
 
   .example__total {
@@ -149,11 +210,18 @@
     line-height: 20px;
 
     width: 25%;
+    margin-top: 0;
     text-align: end;
   }
 
-  .example__stats {
-    width: 52.5%;
+  .example__text-price {
+    display: block;
+    padding-top: 12px;
+  }
+
+  .example__price {
+    display: block;
+    padding-top: 10px;
   }
 
   .example__column {
@@ -161,26 +229,98 @@
     flex-direction: column;
   }
 
-  .example__range {
-    margin-top: auto;
-    margin-bottom: 65px;
-
+  .example__image {
+    // padding-left: 15px;
     align-self: center;
+    // width: 100%;
   }
 
   .example__photo {
-    display: block;
-    width: 690px;
+    width: 100%;
   }
+
+  .example__toggle {
+    font-size: 20px;
+
+    padding-bottom: 6px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.23);
+  }
+
+  .example__range {
+    padding-top: 17px;
+    padding-bottom: 68px;
+  }
+
+  .example__toggle-scale {
+    width: 56%;
+    height: 7px;
+
+    background-color: #dcdcdc;
+    border: none;
+
+    margin: 0 20px;
+  }
+
+  .example__toggle-bar {
+    width: 35px;
+    height: 35px;
+
+    top: 50%;
+    left: 51%;
+    transform: translate(-50%, -51%);
+
+    border-radius: 50%;
+
+    background-color: @white;
+    border: 1px solid #cdcdcd;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+
+    &::after {
+      content: "";
+      position: absolute;
+
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: @green;
+    }
+  }
+
+  .example__image--before {
+    position: relative;
+
+    z-index: 1;
+    background-image: linear-gradient(to bottom, @white 32.6%, @gray--lightest 32.6%);
+  }
+
+  // .example__image--after {
+  //   position: absolute;
+  //   background-image: linear-gradient(to bottom, @white 36.3%, #eaeaea 36.3%);
+  //   overflow: hidden;
+  //   z-index: 2;
+  // }
 }
 
 @media (min-width: @desktop-width) {
   .example {
-    min-height: 620px;
+    min-height: 600px;
 
     display: flex;
 
-    background-size: 100% 71%;
+    // background-image: linear-gradient(90deg, @gray--lightest 41.3%, #eaeaea 41.3%);
+    background-size: 100% 74.5%;
+    border-top: none;
+  }
+
+  .example__image--before {
+    position: relative;
+
+    z-index: 1;
+    background-image: linear-gradient(to bottom, @white 34.5%, @gray--lightest 34.5%);
   }
 
   .example__block {
@@ -199,22 +339,25 @@
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 70px;
+    margin-bottom: 40px;
   }
 
   .example__title {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
+    margin-top: 5px;
   }
 
   .example__text {
-    padding-right: 175px;
-    margin-bottom: 65px;
+    padding-top: 25px;
+    margin-bottom: 69px;
     margin-top: 70px;
+
+    width: 72%;
   }
 
   .example__stats {
     width: 60%;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
   }
 
   .example__total {
