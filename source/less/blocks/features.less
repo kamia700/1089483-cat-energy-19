@@ -110,6 +110,7 @@
   }
 
   .features__list {
+    counter-reset: myCounter;
     // display: flex;
     // flex-wrap: wrap;
     // justify-content: space-between;
@@ -127,6 +128,23 @@
     margin: 45px 0;
     padding-bottom: 45px;
     padding-left: 0;
+
+    &::after {
+      position: absolute;
+      top: -40px;
+      left: 117px;
+      z-index: -1;
+
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      font-family: "Oswald", "Arial Narrow", sans-serif;
+      color: #f2f2f2;
+      display: inline-block;
+
+      font-size: 281.07px;
+      line-height: 281.07px;
+      text-align: right;
+    }
   }
 
   .features__item--nutrients {
