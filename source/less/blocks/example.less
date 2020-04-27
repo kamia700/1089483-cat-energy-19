@@ -105,7 +105,7 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-top: 30px;
+  padding-top: 33px;
   padding-bottom: 35px;
 }
 
@@ -145,13 +145,27 @@
   background-color: @green;
 }
 
+.example__photo {
+  display: block;
+}
+
+@media (max-width: @mobile-width-only) {
+  .example__image--after {
+    display: none;
+  }
+
+  .example__image {
+    width: 100%;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .example {
     position: relative;
     background-color: @white;
     background-image: linear-gradient(90deg, @gray--lightest 50%, #eaeaea 50%);
     background-position: 0 100%;
-    background-size: 100% 43%;
+    background-size: 100% 42.7%;
     background-repeat: no-repeat;
 
     border-top: 1px solid @gray-1;
@@ -227,16 +241,8 @@
   .example__column {
     display: flex;
     flex-direction: column;
-  }
 
-  .example__image {
-    // padding-left: 15px;
-    align-self: center;
-    // width: 100%;
-  }
-
-  .example__photo {
-    width: 100%;
+    position: relative;
   }
 
   .example__toggle {
@@ -247,7 +253,7 @@
   }
 
   .example__range {
-    padding-top: 17px;
+    padding-top: 18px;
     padding-bottom: 68px;
   }
 
@@ -279,9 +285,9 @@
       content: "";
       position: absolute;
 
-      top: 0;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%,-50%);
 
       width: 8px;
       height: 8px;
@@ -290,19 +296,33 @@
     }
   }
 
-  .example__image--before {
+  .example__image-block {
     position: relative;
-
-    z-index: 1;
-    background-image: linear-gradient(to bottom, @white 32.6%, @gray--lightest 32.6%);
   }
 
-  // .example__image--after {
-  //   position: absolute;
-  //   background-image: linear-gradient(to bottom, @white 36.3%, #eaeaea 36.3%);
-  //   overflow: hidden;
-  //   z-index: 2;
-  // }
+  .example__photo {
+    max-width: none;
+  }
+
+  .example__image--before {
+    position: relative;
+    left: 6%;
+    width: 44%;
+    height: 100%;
+    overflow: hidden;
+
+    z-index: 2;
+    background-image: linear-gradient(to bottom, @white 32.5%, @gray--lightest 32.5%);
+  }
+
+  .example__image--after {
+    position: absolute;
+    top: 0;
+    right: 4%;
+    background-image: linear-gradient(to bottom, @white 32.5%, #eaeaea 32.5%);
+    overflow: hidden;
+    z-index: 1;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -312,23 +332,48 @@
     display: flex;
 
     // background-image: linear-gradient(90deg, @gray--lightest 41.3%, #eaeaea 41.3%);
-    background-size: 100% 74.5%;
+    background-size: 100% 70.8%;
     border-top: none;
+    margin-top: 25px;
   }
 
   .example__image--before {
-    position: relative;
+    position: absolute;
+    width: 56%;
+    height: 100%;
+    left: 0;
 
-    z-index: 1;
-    background-image: linear-gradient(to bottom, @white 34.5%, @gray--lightest 34.5%);
+    background-image: linear-gradient(to bottom, #ffffff 29.2%, #f2f2f2 29.2%);
+  }
+
+  .example__image--after {
+    right: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(to bottom, #ffffff 29.2%, #eaeaea 29.2%);
   }
 
   .example__block {
     display: flex;
+    // flex-wrap: wrap;
+
+    width: 1220px;
+    margin: 0 auto;
   }
 
   .example__column {
-    width: 50%;
+    width: 46.7%;
+    margin: 0;
+  }
+
+  .example__column-image {
+    position: relative;
+    width: 53.3%;
+  }
+
+  .example__image-block {
+    height: 100%;
   }
 
   .example__legend {
@@ -339,29 +384,29 @@
     display: flex;
     flex-direction: column;
 
-    margin-bottom: 40px;
+    margin-bottom: 38px;
   }
 
   .example__title {
-    margin-bottom: 50px;
-    margin-top: 5px;
+    margin-bottom: 75px;
+    padding: 0;
+    margin-top: 55px;
   }
 
   .example__text {
-    padding-top: 25px;
-    margin-bottom: 69px;
+    margin-bottom: 70px;
     margin-top: 70px;
 
-    width: 72%;
+    width: 76%;
   }
 
   .example__stats {
-    width: 60%;
+    width: 64%;
     margin-bottom: 50px;
   }
 
   .example__total {
-    width: 60%;
+    width: 66%;
 
     display: flex;
     justify-content: space-between;
@@ -376,5 +421,29 @@
   .example__price {
     width: 50%;
     text-align: center;
+  }
+
+  .example__range {
+    position: absolute;
+    bottom: 69px;
+    right: 0;
+    width: 87%;
+    padding: 0;
+
+    z-index: 2;
+  }
+
+  .example__toggle-scale {
+    width: 100%;
+  }
+
+  .example__toggle {
+    margin: 0;
+  }
+
+  .example__toggle-bar {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
