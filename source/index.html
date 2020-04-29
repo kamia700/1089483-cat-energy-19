@@ -24,7 +24,7 @@
     </div>
     <nav class="main-nav main-nav--index main-nav--opened">
       <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--active">
+        <li class="main-nav__item main-nav__item--active main-nav__item--active-index">
           <a>Главная</a>
         </li>
         <li class="main-nav__item">
@@ -70,7 +70,7 @@
         <li class="programs__item">
           <article class="programs-item programs-card programs-card--mass">
             <h3 class="programs-card__title">Набор массы</h3>
-            <p class="programs-card__text">Заработать авторитет среди дворовых котов
+            <p class="programs-card__text programs-card__text--mass">Заработать авторитет среди дворовых котов
               и&nbsp;даже&nbsp;собак?
               Серия&nbsp;Cat&nbsp;Energy&nbsp;Pro&nbsp;поможет вашему коту нарастить необходимые мышцы!
             </p>
@@ -102,8 +102,8 @@
     </section>
 
     <section class="example">
-      <div class="example__block container">
-        <div class="example__column">
+      <div class="example__block">
+        <div class="example__column container">
           <h2 class="example__title">Живой пример</h2>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat
             Energy&nbsp;Slim.
@@ -127,23 +127,25 @@
             </p>
           </div>
         </div>
-        <div class="example__column">
-          <div class="example__image example__image--before">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
-              <img class="example__photo" src="img/before-mobile@1x.png" width="320" height="230" alt="Фото кота до Кэт Энерджи">
-            </picture>
-          </div>
+        <div class="example__column-image container">
+          <div class="example__image-block">
+            <div class="example__image example__image--before">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png">
+                <img class="example__photo example__photo--before" src="img/before-mobile@1x.png" alt="Фото кота до Кэт Энерджи">
+              </picture>
+            </div>
 
-          <!-- <div class="example__image example__image--after">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
-              <img class="example__photo" src="https://via.placeholder.com/310x233" width="310" height="230"
-                alt="Фото кота после питания по программе Кэт Энерджи">
-            </picture>
-          </div> -->
+            <div class="example__image example__image--after">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png">
+                <img class="example__photo example__photo--after" src="https://via.placeholder.com/310x233"
+                  alt="Фото кота после питания по программе Кэт Энерджи">
+              </picture>
+            </div>
+          </div>
 
           <div class="example__range">
             <button class="example__toggle example__toggle--before" type="button">Было</button>
@@ -169,9 +171,7 @@
       </div>
 
       <div class="cooperation__map">
-        <!-- <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533273!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sse!4v1584711662597!5m2!1sen!2sse"
-          width="320" height="363" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> -->
+        <iframe class="cooperation__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sse!4v1588015384907!5m2!1sen!2sse" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <picture>
           <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png">
           <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png">
