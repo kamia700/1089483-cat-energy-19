@@ -14,7 +14,7 @@
 
 <body>
 
-  <header class="page-header page-header--bgcat container">
+  <header class="page-header page-header--nojs page-header--open page-header--bgcat container">
     <div class="page-header__block">
       <a href="" class="page-header__logo">
         <picture>
@@ -23,10 +23,10 @@
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
         </picture>
       </a>
-      <button class="page-header__toggle page-header__toggle--opened" type="button"
+      <button class="page-header__toggle" type="button"
         alt="Кнопка открытия главного меню"></button>
     </div>
-    <nav class="main-nav main-nav--index main-nav--opened">
+    <nav class="page-header__nav main-nav main-nav--index">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active main-nav__item--active-index">
           <a>Главная</a>
@@ -41,7 +41,6 @@
     </nav>
   </header>
 
-
   <main class="page-main">
 
     <h1 class="visually-hidden">Главная страница-Кэт энерджи</h1>
@@ -51,7 +50,6 @@
         <h2 class="intro-block__title">Функциональное
 питание для котов</h2>
         <p class="intro-block__text">Занялся собой? Займись котом!</p>
-
         <a href="form.html" class="button intro-block__button">Подобрать программу</a>
         <div class="intro-block__image">
           <picture>
@@ -242,6 +240,8 @@
       </div>
     </section>
   </footer>
+
+  <script src="js/script.js"></script>
 
 </body>
 
