@@ -28,16 +28,29 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-  }
-
-  .page-header__toggle--opened {
     background-image: url("../img/icon-close.svg");
     background-repeat: no-repeat;
   }
 
-  .page-header__toggle--closed {
+  .page-header--open .page-header__toggle {
     background-image: url("../img/icon-mobile-menu.svg");
     background-repeat: no-repeat;
+  }
+
+  .page-header--nojs .page-header__toggle {
+    display: none;
+  }
+
+  .page-header--nojs .page-header__nav {
+    display: block;
+  }
+
+  .page-header--open .page-header__nav {
+    display: none;
+  }
+
+  .page-header--close .page-header__nav {
+    display: block;
   }
 }
 
