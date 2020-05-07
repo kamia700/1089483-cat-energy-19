@@ -21,6 +21,19 @@
 
 .social__button {
   display: block;
+
+  svg {
+    fill: #666666;
+  }
+
+  &:hover svg {
+    fill: @green;
+  }
+
+  &:active svg {
+    fill: @green;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

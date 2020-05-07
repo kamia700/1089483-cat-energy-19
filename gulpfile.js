@@ -25,7 +25,7 @@ gulp.task("css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    // .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
@@ -44,10 +44,10 @@ gulp.task("sprite", function () {
 
 gulp.task("html", function () {
   return gulp.src("source/*.html")
-  .pipe(posthtml([
-    include()
-  ]))
-  .pipe(gulp.dest("build"));
+    .pipe(posthtml([
+      include()
+    ]))
+    .pipe(gulp.dest("build"))
 });
 
 gulp.task("images", function () {
@@ -62,7 +62,7 @@ gulp.task("images", function () {
 
 gulp.task("webp", function () {
   return gulp.src("source/img/**/*.{png,jpg}")
-  .pipe(webp({quality:90}))
+  .pipe(webp({quality:70}))
   .pipe(gulp.dest("build/img"));
 });
 
@@ -85,29 +85,28 @@ gulp.task("refresh", function (done) {
   done();
 });
 
-gulp.task ("clean", function(){
+gulp.task("clean", function(){
   return del("build");
 });
 
-gulp.task ("copy", function(){
+gulp.task("copy", function () {
   return gulp.src([
-    "sourse/fonts/**/*.{woff,woff2}",
-    "sourse/img/**",
-    "sourse/js/**",
-    "sourse/*.ico"
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
   ], {
-    base: "sourse"
+    base: "source"
   })
   .pipe(gulp.dest("build"));
 });
 
-gulp.task ("build", gulp.series(
-  "clean",
-  "copy",
-  "css",
-  "sprite",
-  "html"
+gulp.task("build", gulp.series(
+    "clean",
+    "copy",
+    "css",
+    "sprite",
+    "html"
 ));
 
-// gulp.task("build", gulp.series("css", "sprite", "html"));
 gulp.task("start", gulp.series("build", "server"));

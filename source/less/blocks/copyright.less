@@ -13,10 +13,29 @@
 
   color: @gray;
   font-family: @font-text;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .copyright__logo-image {
   margin-left: auto;
+}
+
+.copyright__logo {
+  svg {
+    fill: #666666;
+  }
+
+  &:hover svg {
+    fill: @green;
+  }
+
+  &:active svg {
+    fill: @green;
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
