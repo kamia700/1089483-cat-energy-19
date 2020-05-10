@@ -41,25 +41,21 @@
     background-repeat: no-repeat;
   }
 
-  .page-header--open .page-header__toggle {
+  .page-header--close .page-header__toggle {
     background-image: url("../img/i-mobile-menu.svg");
     background-repeat: no-repeat;
+  }
+
+  .page-header .main-nav__list {
+    display: block;
   }
 
   .page-header--nojs .page-header__toggle {
     display: none;
   }
 
-  .page-header--nojs .page-header__nav {
-    display: block;
-  }
-
-  .page-header--open .page-header__nav {
+  .page-header--close .main-nav__list {
     display: none;
-  }
-
-  .page-header--close .page-header__nav {
-    display: block;
   }
 }
 
@@ -95,7 +91,7 @@
 @media (min-width: @desktop-width) {
   .page-header {
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: normal;
 
     padding-top: 28px;
     padding-bottom: 0;

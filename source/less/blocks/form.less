@@ -20,10 +20,11 @@
   font-weight: 400;
   color: @gray--darkest;
 
+  margin: 0;
   margin-bottom: 32px;
   margin-left: -30px;
   padding-left: 28px;
-  padding-right: 40px;
+  padding-right: 24px;
 
   display: inline-block;
   background-color: #ffffff;
@@ -55,8 +56,8 @@
   text-transform: uppercase;
 
   margin-bottom: 14px;
-  margin-left: 14px;
-  padding-left: 15px;
+  margin-left: 15px;
+  padding-left: 14px;
 
   border: 1px solid @gray-50;
   flex-shrink: 1;
@@ -89,6 +90,9 @@
 .form__input::placeholder {
   color: @gray;
   opacity: 1;
+
+  line-height: 43px;
+  vertical-align: center;
 }
 
 .form__textarea::placeholder {
@@ -101,6 +105,12 @@
   text-transform: uppercase;
 }
 
+.form__input--email,
+.form__input--phone {
+  margin-left: 10px;
+  padding-left: 15px;
+}
+
 .form__textarea {
   font-family: @font-title;
   font-size: 16px;
@@ -108,7 +118,7 @@
   font-weight: 400;
   text-transform: uppercase;
 
-  padding: 12px;
+  padding: 14px;
   margin-bottom: 10px;
 
   border: 1px solid @gray-50;
@@ -120,11 +130,6 @@
 .form__input--weight,
 .form__input--age {
   appearance: textfield;
-}
-
-.form__input--phone,
-.form__input--email {
-  padding-left: 10px;
 }
 
 .form__info--border {
@@ -276,6 +281,12 @@
 
 .form__info--contacts {
   margin: 0;
+  padding-bottom: 7px;
+}
+
+.form__info--comment {
+  margin: 0;
+  padding-bottom: 11px;
 }
 
 .form__wrapper::before {
@@ -347,11 +358,10 @@
     font-size: 36px;
     line-height: 36px;
 
-    margin-left: -41px;
+    margin-left: -43px;
     margin-bottom: 76px;
     padding-left: 40px;
-
-    // width: 95%;
+    padding-right: 40px;
   }
 
   .form__label {
@@ -389,8 +399,12 @@
 
     min-height: 175px;
 
-    padding: 10px 15px;
+    padding: 9px 17px;
     margin-bottom: 46px;
+  }
+
+  .form__input::placeholder {
+    line-height: 50px;
   }
 
   .form__info--add {
@@ -463,7 +477,7 @@
   }
 
   .form__wrapper::before {
-    top: 33px;
+    top: 30px;
     left: 0;
   }
 
@@ -479,10 +493,6 @@
     margin-bottom: 28px;
   }
 
-  // .form__legend--comment {
-  //   width: 41%;
-  // }
-
   .form__textarea::placeholder {
     font-size: 20px;
     line-height: 30px;
@@ -492,8 +502,7 @@
   .form__legend--add {
     flex-grow: 1;
 
-    // width: 47%;
-    margin-bottom: 58px;
+    margin-bottom: 55px;
   }
 
   .form__container-add {
@@ -512,6 +521,10 @@
     height: 15px;
     top: 10px;
     left: 9px;
+  }
+
+  .form__info--contacts {
+    padding-bottom: 10px;
   }
 }
 
