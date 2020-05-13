@@ -4,7 +4,9 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -13,16 +15,16 @@
     <include src="build/img/sprite.svg"></include>
   </div>
 
-  <header class="page-header container">
+  <header class="page-header page-header--nojs container">
     <div class="page-header__block">
-      <a href="" class="page-header__logo">
+      <a href="index.html" class="page-header__logo">
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
           <img class="page-header__logo-image" src="img/logo-mobile.svg" width="192" height="40" alt="Кэт энерджи">
         </picture>
       </a>
-      <button class="page-header__toggle" type="button" alt="Кнопка открытия главного меню"></button>
+      <button class="page-header__toggle" type="button" aria-label="Открыть меню"></button>
     </div>
     <nav class="page-header__nav main-nav">
       <ul class="main-nav__list">
@@ -92,20 +94,20 @@
 
         <fieldset class="form__info form__info--contacts">
           <div class="form__wrapper container">
-            <legend class="form__legend form__legend--contacts">Контактные данные
-              (владельца кота)</legend>
+            <h2 class="form__legend form__legend--contacts">Контактные данные
+(владельца кота)</h2>
 
             <div class="form__block">
               <label class="form__label form__label--email">E-mail:*<input class="form__input form__input--email"
                   type="email" name="email" placeholder="kuklachev@gmail.com">
-                <svg class="form__icon-email">
+                <svg class="form__icon-email" width="19" height="14">
                   <use xlink:href="#icon-email"></use>
                 </svg>
               </label>
 
               <label class="form__label form__label--contacts">Телефон:*<input class="form__input form__input--phone"
                   type="tel" name="phone" placeholder="8 (960) 900-60-90" pattern="8\s[\(]{0,1}\d{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
-                <svg class="form__icon-phone">
+                <svg class="form__icon-phone" width="20" height="20">
                   <use xlink:href="#icon-phone"></use>
                 </svg>
               </label>
@@ -115,7 +117,7 @@
 
         <fieldset class="form__info form__info--comment">
           <div class="form__wrapper container">
-            <legend class="form__legend form__legend--comment">Комментарий</legend>
+            <h2 class="form__legend form__legend--comment">Комментарий</h2>
             <label class="form__label">
               <textarea class="form__textarea" name="comment"
                 placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -125,7 +127,7 @@
 
         <fieldset class="form__info form__info--add">
           <div class="form__wrapper form__wrapper--add container">
-            <legend class="form__legend form__legend--add">Дополнительно</legend>
+            <h2 class="form__legend form__legend--add">Дополнительно</h2>
 
             <div class="form__container-add">
               <label class="form__label form__label--checkbox"><input class="form__input form__input--checkbox"
@@ -169,16 +171,18 @@
         <iframe class="cooperation__iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651586!2d30.320894616097!3d59.938794181876254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya%20Konyushennaya%20St%2C%2019%2C%20Sankt-Peterburg%2C%20Russia%2C%20191186!5e0!3m2!1sen!2sse!4v1588015384907!5m2!1sen!2sse"
           allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <picture>
-          <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
-          <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/bg-map-mobile.webp 1x, img/bg-map-mobile@2x.webp 2x">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
 
-          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
-          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
-          <img class="cooperation__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
-            width="320" height="362" alt="Кэт Энерджи по адресу Санкт-Петербург, Большая Конюшенная, дом 19/8">
-        </picture>
+            <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png 1x, img/bg-map-tablet@2x.png 2x">
+            <img class="cooperation__image" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x"
+            alt="Кэт Энерджи по адресу Санкт-Петербург, Большая Конюшенная, дом 19/8">
+          </picture>
       </div>
     </section>
     <section class="page-footer__info container">
@@ -213,7 +217,7 @@
       <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a>
         <a href="https://htmlacademy.ru/intensive/htmlcss" class="copyright__logo">
-          <svg class="copyright__logo-image" width="34" height="42">
+          <svg class="copyright__logo-image" width="34" height="45">
             <use xlink:href="#icon-htmlacademy"></use>
           </svg>
         </a>
