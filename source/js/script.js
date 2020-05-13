@@ -2,6 +2,7 @@ var nav = document.querySelector('.page-header');
 var toggle = document.querySelector('.page-header__toggle');
 
 nav.classList.remove('page-header--nojs');
+nav.classList.add('page-header--close');
 
 toggle.addEventListener('click', function () {
   if (nav.classList.contains('page-header--open')) {
