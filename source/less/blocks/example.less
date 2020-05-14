@@ -372,8 +372,9 @@
 
     display: flex;
 
-    background-image: linear-gradient(90deg, @gray--lightest 90%, #eaeaea 90%);
-    background-size: 100% 71%;
+    background-image: linear-gradient(90deg, @gray--lightest calc(50% + 340px), #eaeaea calc(50% + 340px));
+    background-size: 100% 100%;
+    background-position-y: 188.5px;
     border-top: none;
     margin-top: 25px;
   }
@@ -389,7 +390,7 @@
   .example__image--after {
     width: 325px;
 
-    background-image: linear-gradient(to bottom, @white 29%, #eaeaea 29%);
+    background-image: linear-gradient(to bottom, @white 189px, #eaeaea 189px);
   }
 
   .example__image-block {
@@ -463,7 +464,7 @@
 
   .example__range {
     position: absolute;
-    bottom: 68px;
+    top: 555px;
     right: 0;
     width: 88%;
     padding: 0;
